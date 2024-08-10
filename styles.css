@@ -1,0 +1,293 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.pc-none {
+  display: none;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background: linear-gradient(#ffc2c2, #bcffbc);
+  overflow: hidden;
+}
+
+.contact-container {
+  height: 102vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-left-title h2 {
+  font-weight: 600;
+  color: #030303;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.contact-left-title p {
+  font-weight: 500;
+  color: #000000;
+  font-size: 20px;
+  border-bottom: #03301b 2.5px solid;
+}
+
+.contact-left-title hr {
+  border: none;
+  width: 120px;
+  height: 5px;
+  background-color: #a363aa;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-left-title p {
+  border: none;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.contact-inputs {
+  width: 400px;
+  max-width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 50px;
+}
+
+.contact-left textarea {
+  width: 100%;
+  height: 140px;
+  padding: 15px;
+  border-radius: 20px;
+  resize: none;
+}
+
+.contact-inputs:focus {
+  border: 2px solid #4fff92;
+}
+
+.contact-inputs::placeholder {
+  color: #979797;
+}
+
+.bbtn {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: #fff;
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(320deg, #ff891a, #a363aa);
+  cursor: pointer;
+}
+
+.contact-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+.gl {
+  cursor: no-drop;
+}
+
+.bbtn:hover {
+  animation: btn 1s infinite alternate;
+}
+
+@keyframes btn {
+  0% {
+    scale: 100%;
+  }
+  100% {
+    scale: 110%;
+  }
+}
+
+/* Modal styles */
+.la {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  width: 190px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(320deg, #000000, #a363aa);
+  cursor: pointer;
+}
+.con-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 15px;
+  color: #fff;
+  gap: 10px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(320deg, #0044ff, #00ff6a);
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.438);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+.modal-content h2 {
+  text-decoration: underline 2px solid gray;
+}
+.close {
+  color: #000000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1.5px solid #cacaca;
+}
+
+.product-item button {
+  background-color: #4fff92;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Mobile view adjustments */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-left {
+    width: 100%;
+  }
+
+  .contact-inputs,
+  .contact-left textarea {
+    width: 100%;
+  }
+  .contact-inputs {
+    width: 80vw;
+  }
+  #pro-sel {
+    border-radius: 2px;
+  }
+  .contact-right {
+    display: none;
+  }
+  .contact-left-title p {
+    border: none;
+    width: 320px;
+    margin: 0 auto;
+  }
+  .contact-inputs {
+    margin: 0 auto;
+  }
+  body {
+    font-family: "Outfit", sans-serif; /* Assuming "Outfit" is a font name */
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+  .contact-left button {
+    margin-left: 50%;
+  }
+}
+.pc-none {
+  display: none;
+}
+
+@media screen and (max-width: 318px) {
+  body .contact-right,
+  .contact-container,
+  .contact-inputs {
+    display: none;
+  }
+
+  .dplay-none {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 15px 30px;
+    font-size: 18px;
+    margin-top: 400px;
+    margin-bottom: 345px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(320deg, #ff891a, #a363aa);
+    cursor: pointer;
+  }
+
+  .dplay-none p {
+    text-decoration: underline 2px;
+  }
+
+  .pc-none {
+    display: block;
+  }
+}
+@media screen and (max-width: 320px) {
+  .bbtn {
+    width: 55%;
+  }
+}
